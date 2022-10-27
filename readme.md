@@ -1,4 +1,4 @@
-# Hotdog Animated Menu
+# The Animated Hotdog Menu
 
-The original all CSS hotdog animated menu.
+The original all CSS animated hotdog menu.
 Stolen from: https://codepen.io/alvarotrigo/pen/poWRrQW
