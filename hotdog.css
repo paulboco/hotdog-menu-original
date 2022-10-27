@@ -40,7 +40,7 @@ body {
     width: var(--hotdog-size);
     z-index: 1;
     /*-------*/
-    background-color: blue;
+    background-color: #27f8;
 }
 
 .hotdog div {
@@ -48,11 +48,17 @@ body {
     width: 3em;
     height: 7px;
     border-radius: 3px;
-    background-color: #f8982b;
     margin-top: 8px;
     transition: all 0.3s ease-in-out;
 }
 
+div.top-bun, div.bottom-bun {
+    background-color: orange;
+}
+
+div.wiener {
+    background-color: red;
+}
 /*
 |--------------------------------------------------------------------------
 | Animations
@@ -64,12 +70,13 @@ body {
     margin-top: 25px;
 }
 
-#toggle:checked + .hotdog .bottom-bun {
-    opacity: 0;
-    transform: rotate(45deg);
-}
-
 #toggle:checked + .hotdog .wiener {
+    background-color: orange;
     transform: rotate(45deg);
     margin-top: -7px;
+}
+
+#toggle:checked + .hotdog .bottom-bun {
+    opacity: 0;
+    /*transform: rotate(45deg);*/
 }
