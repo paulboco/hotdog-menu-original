@@ -1,0 +1,75 @@
+/*
+|--------------------------------------------------------------------------
+| The Animated Hotdog Menu
+|--------------------------------------------------------------------------
+*/
+
+/*
+|--------------------------------------------------------------------------
+| Reset
+|--------------------------------------------------------------------------
+*/
+
+html {box-sizing: border-box;}*, *:before, *:after {box-sizing: inherit;}* {margin: 0;padding: 0;}
+
+body {
+    background-image: url(images/background.jpg);
+    font-family: sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Hotdog
+|--------------------------------------------------------------------------
+*/
+
+#toggle {
+    /*display: none;*/
+}
+
+.hotdog {
+    --hotdog-size: 2.75rem;
+    --hotdog-offset-x: 1rem;
+    --hotdog-offset-y: 1rem;
+    position: absolute;
+    top: var(--hotdog-offset-y);
+    right: var(--hotdog-offset-x);
+    height: var(--hotdog-size);
+    width: var(--hotdog-size);
+    z-index: 1;
+    /*-------*/
+    background-color: blue;
+}
+
+.hotdog div {
+    position: relative;
+    width: 3em;
+    height: 7px;
+    border-radius: 3px;
+    background-color: #f8982b;
+    margin-top: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Animations
+|--------------------------------------------------------------------------
+*/
+
+#toggle:checked + .hotdog .top-bun {
+    transform: rotate(-45deg);
+    margin-top: 25px;
+}
+
+#toggle:checked + .hotdog .bottom-bun {
+    opacity: 0;
+    transform: rotate(45deg);
+}
+
+#toggle:checked + .hotdog .wiener {
+    transform: rotate(45deg);
+    margin-top: -7px;
+}
