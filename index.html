@@ -6,23 +6,44 @@
     <title>Animated Hotdog Menu</title>
     <link rel="stylesheet" href="hotdog.css">
     <link rel="stylesheet" href="nav.css">
+    <style>
+        .layout-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: var(--layout-gap);
+        }
+
+        .layout-container > div {
+            padding-block-start: var(--layout-gap);
+            text-align: center;
+            outline: solid 1px purple;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Hotdog menu -->
-    <input id="toggle" type="checkbox" />
-    <label for="toggle" class="hotdog">
-        <div class="top-bun"></div>
-        <div class="wiener"></div>
-        <div class="bottom-bun"></div>
-    </label>
+    <div class="layout-container">
+        <div>one</div>
+        <div></div>
+        <div>
+            <div class="hotdog-nav-container">
+                <!-- Hotdog menu -->
+                <input id="toggle" type="checkbox" />
+                <label for="toggle" class="hotdog">
+                    <div class="top-bun"></div>
+                    <div class="wiener"></div>
+                    <div class="bottom-bun"></div>
+                </label>
 
-    <!-- Nav -->
-    <div class="nav">
-        <div class="nav-wrapper">
-            <nav>
-                <a href="#">HOME</a>
-            </nav>
+                <!-- Nav -->
+                <div class="nav">
+                    <div class="nav-wrapper">
+                        <nav>
+                            <a href="#">HOME</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

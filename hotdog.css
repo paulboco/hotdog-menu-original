@@ -31,32 +31,21 @@ body {
 
 .hotdog {
     --hotdog-size: 27px;
-    --hotdog-offset-x: 10px;
-    --hotdog-offset-y: 10px;
     --hotdog-margin-top: calc(var(--hotdog-size) / 10);
-    position: absolute;
-    top: var(--hotdog-offset-y);
-    right: var(--hotdog-offset-x);
+    position: relative;
     height: var(--hotdog-size);
     width: var(--hotdog-size);
     z-index: 1;
     cursor: pointer;
-    /*-------*/
-    background-color: #27f5;
 }
 
 .hotdog div {
     position: relative;
-    width: 3rem;
-    height: 7px;
-    border-radius: 3px;
-    margin-top: 8px;
-    transition: all 0.3s ease-in-out;
-    /*-----*/
     width: var(--hotdog-size);
     height: calc(var(--hotdog-size) / 5);
     border-radius: 3px;
     margin-top: var(--hotdog-margin-top);
+    transition: all 0.3s ease-in-out;
 }
 
 div.top-bun, div.bottom-bun {
@@ -74,19 +63,15 @@ div.wiener {
 
 #toggle:checked + .hotdog .top-bun {
     transform: rotate(-45deg);
-    /*margin-top: 25px;*/
     margin-top: calc(var(--hotdog-margin-top) * 4);
-    /*margin-top: var(--hotdog-margin-top);*/
 }
 
 #toggle:checked + .hotdog .wiener {
     background-color: orange;
     transform: rotate(45deg);
-    /*margin-top: -7px;*/
     margin-top: calc(-1 * (var(--hotdog-margin-top) * 2));
 }
 
 #toggle:checked + .hotdog .bottom-bun {
     opacity: 0;
-    /*transform: rotate(45deg);*/
 }
